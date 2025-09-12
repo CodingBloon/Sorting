@@ -1,8 +1,9 @@
 package de.bloon;
 
-import de.bloon.util.SortDouble;
+import de.bloon.sorting.SelectionSort;
+import de.bloon.sorting.SortingAlgorithm;
 import de.bloon.util.SortInt;
-import de.bloon.util.Sortable;
+import de.bloon.util.time.ProcessTimer;
 
 public class Main {
 
@@ -15,14 +16,19 @@ public class Main {
                 SortInt.valueOf(57),
         };
 
-        SelectionSort<Integer> selectionSort = new SelectionSort<Integer>(arr);
+        ProcessTimer timer = new ProcessTimer();
+        timer.start();
+        SortingAlgorithm<Integer> selectionSort = new SelectionSort<Integer>(arr);
         selectionSort.sort();
+
+        timer.stop();
+        timer.printNanoseconds();
+        timer.printMilliseconds();
+        timer.printSeconds();
 
         SortInt[] sorted = (SortInt[]) selectionSort.getArray();
         for (SortInt sortInt : sorted) {
             System.out.println(sortInt.getValue());
         }
-
     }
-
 }

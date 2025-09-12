@@ -1,25 +1,19 @@
-package de.bloon;
+package de.bloon.sorting;
 
 import de.bloon.util.Sortable;
 
-public class SelectionSort<T> {
-
-    private final Sortable<T>[] arr;
+public class SelectionSort<T> extends SortingAlgorithm<T> {
 
     public SelectionSort(Sortable<T>[] arr) {
-        this.arr = arr;
+        super(arr);
     }
 
-    public Sortable<T>[] getArray() {
-        return this.arr;
-    }
+    @Override
+    public Sortable<T>[] sort() {
+        for(int i = 0; i < this.arr.length; i++)
+            swap(i, findMin(i));
 
-    public void sort() {
-        for(int i = 0; i < this.arr.length; i++) {
-            int min_idx = findMin(i);
-
-            swap(i, min_idx);
-        }
+        return arr;
     }
 
     private int findMin(int start) {
