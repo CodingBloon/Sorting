@@ -1,6 +1,6 @@
 package de.bloon.sorting;
 
-import de.bloon.util.Sortable;
+import de.bloon.sorting.util.Sortable;
 
 public class SelectionSort<T> extends SortingAlgorithm<T> {
 
