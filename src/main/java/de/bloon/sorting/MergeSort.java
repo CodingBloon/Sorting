@@ -1,4 +1,86 @@
 package de.bloon.sorting;
 
-public class MergeSort<T> {
+import de.bloon.sorting.util.SortInt;
+import de.bloon.sorting.util.Sortable;
+
+public class MergeSort<T> extends SortingAlgorithm<T> {
+
+    public MergeSort(Sortable<T>[] arr) {
+        super(arr);
+
+        String s;
+    }
+
+    @Override
+    public Sortable<T>[] sort() {
+        startMergeSort();
+        return arr;
+    }
+
+    private void startMergeSort() {
+        split(this.arr);
+    }
+
+    private void split(Sortable<T>[] arr) {
+        int length = arr.length;
+
+        if(length <= 1) return;
+
+        int middle = length / 2;
+        @SuppressWarnings("unchecked")
+        Sortable<T>[] left = (Sortable<T>[]) new Sortable[middle];
+        @SuppressWarnings("unchecked")
+        Sortable<T>[] right = (Sortable<T>[]) new Sortable[length - middle];
+
+        int i = 0; //left array
+        int j = 0; //right array;
+
+        for(; i < length; i++) {
+            if(i < middle)
+                left[i] = arr[i];
+            else {
+                right[j] = arr[i];
+                j++;
+            }
+        }
+
+        split(left);
+        split(right);
+        merge(left, right, arr);
+    }
+
+    private void merge(Sortable<T>[] left, Sortable<T>[] right, Sortable<T>[] arr) {
+
+        int leftSize = arr.length / 2;
+        int rightSize = arr.length - leftSize;
+        int     i = 0,
+                l = 0,
+                r = 0;
+
+        //check for merging
+        while (l < leftSize && r < rightSize) {
+            if(left[l].smallerAs(right[r])) {
+                arr[i] = left[l];
+                i++;
+                l++;
+            } else {
+                arr[i] = right[r];
+                i++;
+                r++;
+            }
+        }
+
+        while(l < leftSize) {
+            arr[i] = left[l];
+            i++;
+            l++;
+        }
+
+        while(r < rightSize) {
+            arr[i] = right[r];
+            i++;
+            r++;
+        }
+    }
+
 }
