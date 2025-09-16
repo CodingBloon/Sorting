@@ -1,14 +1,11 @@
-package de.bloon.sorting;
+package de.bloon.sorting.algorithms;
 
-import de.bloon.sorting.util.SortInt;
-import de.bloon.sorting.util.Sortable;
+import de.bloon.sorting.types.Sortable;
 
 public class MergeSort<T> extends SortingAlgorithm<T> {
 
     public MergeSort(Sortable<T>[] arr) {
         super(arr);
-
-        String s;
     }
 
     @Override

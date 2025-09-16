@@ -1,4 +1,4 @@
-package de.bloon.sorting.util;
+package de.bloon.sorting.types;
 
 public abstract  class Sortable<T> {
 

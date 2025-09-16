@@ -1,23 +1,26 @@
 package de.bloon;
 
-import de.bloon.sorting.MergeSort;
-import de.bloon.sorting.SelectionSort;
-import de.bloon.sorting.SortingAlgorithm;
-import de.bloon.sorting.util.SortInt;
-import de.bloon.sorting.util.Sortable;
+import de.bloon.sorting.algorithms.MergeSort;
+import de.bloon.sorting.algorithms.SelectionSort;
+import de.bloon.sorting.algorithms.SortingAlgorithm;
+import de.bloon.sorting.types.SortInt;
 
 import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Selection Sort took " + (trackDuration(
-                new SelectionSort<>(generateRandomArray(20000, Integer.MIN_VALUE, Integer.MAX_VALUE))
-        ) / 1000000.D) + "ms (for 20,000 numbers)");
+        double sSort = trackDuration(new SelectionSort<>(generateRandomArray(20000, Integer.MIN_VALUE, Integer.MAX_VALUE))) / 1000000.D;
+        double mSort = trackDuration(new MergeSort<>(generateRandomArray(20000, Integer.MIN_VALUE, Integer.MAX_VALUE))) / 1000000.D;
 
-        System.out.println("Merge Sort took " + (trackDuration(
-                new MergeSort<>(generateRandomArray(500000, Integer.MIN_VALUE, Integer.MAX_VALUE))
-        ) / 1000000.D) + "ms (for 500,000 numbers)");
+        double f = sSort / mSort;
+
+        System.out.println("Selection Sort took " + sSort);
+        System.out.println("Merge Sort took " + mSort);
+
+        if(f > 1)
+            System.out.println("Merge Sort was " + Math.round(f) + " times faster than Selection Sort");
+        else System.out.println("Selection Sort was " + Math.round(f) + " times faster than Merge Sort");
     }
 
     private static long trackDuration(SortingAlgorithm<Integer> algorithm) {

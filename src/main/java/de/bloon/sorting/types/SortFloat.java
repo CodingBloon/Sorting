@@ -1,8 +1,8 @@
-package de.bloon.sorting.util;
+package de.bloon.sorting.types;
 
 public class SortFloat extends Sortable<Float> {
 
-    public SortFloat(Float value) {
+    private SortFloat(Float value) {
         super(value, Float.class);
     }
 

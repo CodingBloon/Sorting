@@ -1,8 +1,8 @@
-package de.bloon.sorting.util;
+package de.bloon.sorting.types;
 
 public class SortLong extends Sortable<Long> {
 
-    public SortLong(Long value) {
+    private SortLong(Long value) {
         super(value, Long.class);
     }
 

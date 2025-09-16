@@ -1,8 +1,8 @@
-package de.bloon.sorting.util;
+package de.bloon.sorting.types;
 
 public class SortChar extends Sortable<Character> {
 
-    public SortChar(Character value) {
+    private SortChar(Character value) {
         super(value, Character.class);
     }
 
