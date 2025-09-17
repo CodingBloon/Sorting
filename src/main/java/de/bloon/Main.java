@@ -3,10 +3,7 @@ package de.bloon;
 import de.bloon.sorting.algorithms.MergeSort;
 import de.bloon.sorting.algorithms.SelectionSort;
 import de.bloon.sorting.algorithms.SortingAlgorithm;
-import de.bloon.sorting.arrays.SortableArrayFactory;
-import de.bloon.sorting.types.SortDouble;
-import de.bloon.sorting.types.SortInt;
-import de.bloon.sorting.types.Sortable;
+import de.bloon.sorting.types.SortChar;
 
 import java.util.Random;
 
@@ -35,13 +32,7 @@ public class Main {
         return end - start;
     }
 
-    private static void turnArrayToSortArray(Object[] objects, Class<?> type) {
-        //get Sortable for type
-        //get Sortable Array Builder
-
-
-    }
-
+    @SuppressWarnings("all")
     private static Object[] generateRandomArray(int size, int min, int max) {
         Random r = new Random();
         Object[] arr = new Object[size];

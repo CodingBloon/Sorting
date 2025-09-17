@@ -24,6 +24,12 @@ public class SortDouble extends Sortable<Double> {
         return false;
     }
 
+    /**
+     * Returns a {@code Sortable} instance representing the specified {@code double} value
+     *
+     * @param d a {@code double} value
+     * @return a {@code SortDouble} instance representing {@code d}
+     * */
     public static SortDouble valueOf(double d) {
         return new SortDouble(d);
     }

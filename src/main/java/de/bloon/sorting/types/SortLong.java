@@ -24,6 +24,13 @@ public class SortLong extends Sortable<Long> {
         return false;
     }
 
+
+    /**
+     * Returns a {@code Sortable} instance representing the specified {@code long} value
+     *
+     * @param l a {@code long} value
+     * @return a {@code SortLong} instance representing {@code l}
+     * */
     public static SortLong valueOf(long l) {
         return new SortLong(l);
     }

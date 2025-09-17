@@ -4,6 +4,9 @@ import de.bloon.sorting.types.*;
 
 import java.util.HashMap;
 
+/**
+ * Registry of all {@code Sortable} types and their builders
+ * */
 public class SortableBuilderRegistry {
 
     private static final SortableBuilder charBuilder = new SortableBuilder() {
@@ -44,10 +47,20 @@ public class SortableBuilderRegistry {
         put(Long.class, longBuilder);
     }};
 
+    /**
+     * Registers a {@code SortableBuilder} and creates an association with a datatype
+     *
+     * @param type Datatype the builder is being registered
+     * @param builder {@code SortableBuilder} instance
+     * */
     public static void register(Class<?> type, SortableBuilder builder) {
         registry.put(type, builder);
     }
 
+    /**
+     * @param type Datatype for a builder should be searched for
+     * @return {@code SortableBuilder} for {@code Sortable} of type {@code type}
+     * */
     public static SortableBuilder getBuilder(Class<?> type) {
         return registry.get(type);
     }

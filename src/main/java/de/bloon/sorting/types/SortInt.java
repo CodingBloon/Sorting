@@ -24,6 +24,12 @@ public class SortInt extends Sortable<Integer> {
         return false;
     }
 
+    /**
+     * Returns a {@code Sortable} instance representing the specified {@code int} value
+     *
+     * @param i a {@code int} value
+     * @return a {@code SortInt} instance representing {@code c}
+     * */
     public static SortInt valueOf(int i) {
         return new SortInt(i);
     }

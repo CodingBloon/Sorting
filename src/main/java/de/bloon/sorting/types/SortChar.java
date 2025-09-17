@@ -24,6 +24,12 @@ public class SortChar extends Sortable<Character> {
         return false;
     }
 
+    /**
+     * Returns a {@code Sortable} instance representing the specified {@code char} value
+     *
+     * @param c a {@code char} value
+     * @return a {@code SortChar} instance representing {@code c}
+     * */
     public static SortChar valueOf(char c) {
         return new SortChar(c);
     }

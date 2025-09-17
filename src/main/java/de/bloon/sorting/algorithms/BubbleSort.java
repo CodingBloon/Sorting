@@ -2,6 +2,11 @@ package de.bloon.sorting.algorithms;
 
 import de.bloon.sorting.types.Sortable;
 
+/**
+ * Implementation of Bubble Sort Algorithm
+ * <p>Time Complexity O(n^2)
+ * <p>Space Complexity (1)
+ * */
 public class BubbleSort<T> extends SortingAlgorithm<T> {
 
     public BubbleSort(Sortable<T>[] arr) {

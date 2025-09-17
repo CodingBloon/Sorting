@@ -6,6 +6,11 @@ import de.bloon.sorting.types.*;
 
 import java.util.HashMap;
 
+/**
+ * Registry for all {@code SortableArrayBuilder}.
+ * Builders for {@code Character}, {@code Integer}, {@code Long}, {@code Float} and {@code Double} are already registered.
+ * New {@code SortableArrayBuilder} can be registered with register
+ * */
 public class SortableArrayBuilderRegistry {
 
     private static final SortableArrayBuilder charArrBuilder = new SortableArrayBuilder() {
@@ -47,10 +52,22 @@ public class SortableArrayBuilderRegistry {
         put(Long.class, longArrBuilder);
     }};
 
+    /**
+     * Registers an {@code SortableArrayBuilder} and associates it with a type of {@code Sortable}
+     *
+     * @param arrayType type for which data the builder is registered
+     * @param arrayBuilder {@code SortableArrayBuilder} instance
+    * */
     public static void register(Class<?> arrayType, SortableArrayBuilder arrayBuilder) {
         registry.put(arrayType, arrayBuilder);
     }
 
+    /**
+     * Returns a {@code SortableArrayBuilder} for the specified class
+     *
+     * @param type Datatype for which the builder is being searched
+     * @return {@code SortableArrayBuilder} for datatype {@code type}
+    * */
     public static SortableArrayBuilder getArrayBuilder(Class<?> type) {
         return registry.get(type);
     }

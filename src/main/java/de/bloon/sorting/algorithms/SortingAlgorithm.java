@@ -1,6 +1,5 @@
 package de.bloon.sorting.algorithms;
 
-import de.bloon.sorting.arrays.SortableArrayBuilder;
 import de.bloon.sorting.arrays.SortableArrayFactory;
 import de.bloon.sorting.types.Sortable;
 
@@ -24,10 +23,18 @@ public class SortingAlgorithm<T> {
         this.arr = (Sortable<T>[]) temp;
     }
 
+    /**
+     * Sorts all data in the array
+     *
+     * @return sorted array
+     * */
     public Sortable<T>[] sort() {
         return arr;
     }
 
+    /**
+     * @return array stored in the algorithm class
+     * */
     public Sortable<T>[] getArray() {
         return this.arr;
     }

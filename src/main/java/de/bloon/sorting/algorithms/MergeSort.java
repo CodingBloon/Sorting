@@ -2,6 +2,11 @@ package de.bloon.sorting.algorithms;
 
 import de.bloon.sorting.types.Sortable;
 
+/**
+ * Implementation of Merge Sort Algorithm
+ * <p>Time Complexity O(nlog(n))
+ * <p>Space Complexity O(n)
+ * */
 public class MergeSort<T> extends SortingAlgorithm<T> {
 
     public MergeSort(Sortable<T>[] arr) {

@@ -24,6 +24,12 @@ public class SortFloat extends Sortable<Float> {
         return false;
     }
 
+    /**
+     * Returns a {@code Sortable} instance representing the specified {@code float} value
+     *
+     * @param f a {@code float} value
+     * @return a {@code SortFloat} instance representing {@code f}
+     * */
     public static SortFloat valueOf(float f) {
         return new SortFloat(f);
     }
