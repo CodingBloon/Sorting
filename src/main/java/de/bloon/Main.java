@@ -3,24 +3,28 @@ package de.bloon;
 import de.bloon.sorting.algorithms.MergeSort;
 import de.bloon.sorting.algorithms.SelectionSort;
 import de.bloon.sorting.algorithms.SortingAlgorithm;
+import de.bloon.sorting.arrays.SortableArrayFactory;
+import de.bloon.sorting.types.SortDouble;
 import de.bloon.sorting.types.SortInt;
+import de.bloon.sorting.types.Sortable;
 
 import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
-        double sSort = trackDuration(new SelectionSort<>(generateRandomArray(20000, Integer.MIN_VALUE, Integer.MAX_VALUE))) / 1000000.D;
-        double mSort = trackDuration(new MergeSort<>(generateRandomArray(20000, Integer.MIN_VALUE, Integer.MAX_VALUE))) / 1000000.D;
+        Object[] data = generateRandomArray(20000, Integer.MIN_VALUE, Integer.MAX_VALUE);
 
-        double f = sSort / mSort;
+        double sSort = trackDuration(new SelectionSort<>(data, data[0].getClass())) / 1000000D;
+        double mSort = trackDuration(new MergeSort<>(data, data[0].getClass())) / 1000000D;
 
-        System.out.println("Selection Sort took " + sSort);
-        System.out.println("Merge Sort took " + mSort);
+        System.out.println("Selection Sort took " + sSort + "ms");
+        System.out.println("Merge Sort took " + mSort + "ms");
 
-        if(f > 1)
-            System.out.println("Merge Sort was " + Math.round(f) + " times faster than Selection Sort");
-        else System.out.println("Selection Sort was " + Math.round(f) + " times faster than Merge Sort");
+        double d = sSort / mSort;
+        if(d > 1D)
+            System.out.println("Merge Sort was " + Math.round(d) + " times faster than Selection Sort");
+        else System.out.println("Selection Sort was " + Math.round(d) + " times faster than Merge Sort");
     }
 
     private static long trackDuration(SortingAlgorithm<Integer> algorithm) {
@@ -31,12 +35,19 @@ public class Main {
         return end - start;
     }
 
-    @SuppressWarnings("all")
-    private static SortInt[] generateRandomArray(int num, int min, int max) {
+    private static void turnArrayToSortArray(Object[] objects, Class<?> type) {
+        //get Sortable for type
+        //get Sortable Array Builder
+
+
+    }
+
+    private static Object[] generateRandomArray(int size, int min, int max) {
         Random r = new Random();
-        SortInt[] arr = new SortInt[num];
-        for(int i = 0; i < num; i++) {
-            arr[i] = SortInt.valueOf(r.nextInt(min, max));
+        Object[] arr = new Object[size];
+
+        for(int i = 0; i < size; i++) {
+            arr[i] = r.nextInt(min, max);
         }
 
         return arr;

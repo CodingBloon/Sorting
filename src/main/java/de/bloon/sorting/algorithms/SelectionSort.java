@@ -8,6 +8,10 @@ public class SelectionSort<T> extends SortingAlgorithm<T> {
         super(arr);
     }
 
+    public SelectionSort(Object[] objects, Class<?> dataType) {
+        super(objects, dataType);
+    }
+
     @Override
     public Sortable<T>[] sort() {
         for(int i = 0; i < this.arr.length; i++)

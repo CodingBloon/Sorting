@@ -2,7 +2,7 @@ package de.bloon.sorting.types;
 
 public class SortDouble extends Sortable<Double> {
 
-    private SortDouble(Double value) {
+    public SortDouble(Double value) {
         super(value, Double.class);
     }
 

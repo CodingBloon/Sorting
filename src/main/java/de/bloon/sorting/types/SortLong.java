@@ -2,7 +2,7 @@ package de.bloon.sorting.types;
 
 public class SortLong extends Sortable<Long> {
 
-    private SortLong(Long value) {
+    public SortLong(Long value) {
         super(value, Long.class);
     }
 

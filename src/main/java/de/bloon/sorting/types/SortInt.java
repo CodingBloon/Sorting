@@ -2,7 +2,7 @@ package de.bloon.sorting.types;
 
 public class SortInt extends Sortable<Integer> {
 
-    private SortInt(Integer value) {
+    public SortInt(Integer value) {
         super(value, Integer.class);
     }
 

@@ -8,6 +8,10 @@ public class MergeSort<T> extends SortingAlgorithm<T> {
         super(arr);
     }
 
+    public MergeSort(Object[] objects, Class<?> dataType) {
+        super(objects, dataType);
+    }
+
     @Override
     public Sortable<T>[] sort() {
         startMergeSort();

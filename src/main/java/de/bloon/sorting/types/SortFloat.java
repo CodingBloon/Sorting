@@ -2,7 +2,7 @@ package de.bloon.sorting.types;
 
 public class SortFloat extends Sortable<Float> {
 
-    private SortFloat(Float value) {
+    public SortFloat(Float value) {
         super(value, Float.class);
     }
 

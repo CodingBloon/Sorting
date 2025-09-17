@@ -5,7 +5,7 @@ public abstract  class Sortable<T> {
     protected T value;
     protected Class<T> TYPE;
 
-    public Sortable(T value, Class<T> TYPE) {
+    protected Sortable(T value, Class<T> TYPE) {
         this.value = value;
         this.TYPE = TYPE;
     }
@@ -48,5 +48,4 @@ public abstract  class Sortable<T> {
     public abstract int compareTo(Sortable<T> o);
 
     public abstract boolean equalsTo(Object o);
-
 }

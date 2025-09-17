@@ -8,6 +8,10 @@ public class BubbleSort<T> extends SortingAlgorithm<T> {
         super(arr);
     }
 
+    public BubbleSort(Object[] objects, Class<?> dataType) {
+        super(objects, dataType);
+    }
+
     @Override
     public Sortable<T>[] sort() {
         for(int i = 0; i < arr.length; i++) {

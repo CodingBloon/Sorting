@@ -2,7 +2,7 @@ package de.bloon.sorting.types;
 
 public class SortChar extends Sortable<Character> {
 
-    private SortChar(Character value) {
+    public SortChar(Character value) {
         super(value, Character.class);
     }
 
