@@ -3,14 +3,28 @@ package de.bloon.sorting.algorithms;
 import de.bloon.sorting.arrays.SortableArrayFactory;
 import de.bloon.sorting.types.Sortable;
 
-public class SortingAlgorithm<T> {
+public abstract class SortingAlgorithm<T> {
 
     protected final Sortable<T>[] arr;
 
+    /**
+     * Constructs a SortingAlgorithm instance
+     *
+     * @param arr {@code Sortable} array to initialize sorting algorithm
+     * */
     public SortingAlgorithm(Sortable<T>[] arr) {
         this.arr = arr;
     }
 
+    /**
+     * Constructs a SortingAlgorithm instance
+     *
+     * @param objects array of objects to initialize sorting algorithm
+     * @param dataType - type of which data should be initialized
+     *
+     * @throws RuntimeException if no {@code Sortable} type should be found
+     *                          or {@code Sortable} type does not match expected type
+     * */
     @SuppressWarnings("unchecked")
     public SortingAlgorithm(Object[] objects, Class<?> dataType) {
         Sortable<?>[] temp = SortableArrayFactory.makeArray(objects);
@@ -28,9 +42,7 @@ public class SortingAlgorithm<T> {
      *
      * @return sorted array
      * */
-    public Sortable<T>[] sort() {
-        return arr;
-    }
+    public abstract Sortable<T>[] sort();
 
     /**
      * @return array stored in the algorithm class

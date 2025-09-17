@@ -3,7 +3,6 @@ package de.bloon;
 import de.bloon.sorting.algorithms.MergeSort;
 import de.bloon.sorting.algorithms.SelectionSort;
 import de.bloon.sorting.algorithms.SortingAlgorithm;
-import de.bloon.sorting.types.SortChar;
 
 import java.util.Random;
 

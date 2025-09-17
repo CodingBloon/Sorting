@@ -1,7 +1,6 @@
 package de.bloon.sorting.arrays.registry;
 
 import de.bloon.sorting.arrays.SortableArrayBuilder;
-import de.bloon.sorting.arrays.SortableArrayFactory;
 import de.bloon.sorting.types.*;
 
 import java.util.HashMap;

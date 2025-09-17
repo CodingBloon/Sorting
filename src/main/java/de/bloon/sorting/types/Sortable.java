@@ -1,19 +1,34 @@
 package de.bloon.sorting.types;
 
+/**
+ * The {@code Sortable} class wraps a value of any type {@code T}.
+ * <p>{@code Sortables} can be compared with other {@code Sortables} of same type or with their underlying type.
+ * */
 public abstract  class Sortable<T> {
 
     protected T value;
     protected Class<T> TYPE;
 
+    /**
+     * Constructs a newly allocated {@code Sortable} object
+     * @param value the value represented by the {@code Sortable}
+     * @param TYPE type of the {@code Sortable}
+     * */
     protected Sortable(T value, Class<T> TYPE) {
         this.value = value;
         this.TYPE = TYPE;
     }
 
+    /**
+     * @return value of {@code Sortable}
+     * */
     public T getValue() {
         return this.value;
     }
 
+    /**
+     * @return datatype of sortable
+     * */
     public Class<T> getTypeClass() {
         return TYPE;
     }
