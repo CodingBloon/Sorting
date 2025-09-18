@@ -1,7 +1,6 @@
 package de.bloon;
 
 import de.bloon.sorting.algorithms.MergeSort;
-import de.bloon.sorting.algorithms.QuickSort;
 import de.bloon.sorting.algorithms.SelectionSort;
 import de.bloon.sorting.algorithms.SortingAlgorithm;
 
@@ -17,14 +16,9 @@ public class Main {
 
         System.out.println("Selection Sort took " + sSort + "ms");
         System.out.println("Merge Sort took " + mSort + "ms");
-
-        double d = sSort / mSort;
-        if(d > 1D)
-            System.out.println("Merge Sort was " + Math.round(d) + " times faster than Selection Sort");
-        else System.out.println("Selection Sort was " + Math.round(d) + " times faster than Merge Sort");
     }
 
-    private static long trackDuration(SortingAlgorithm<Integer> algorithm) {
+    private static long trackDuration(SortingAlgorithm<?> algorithm) {
         long start = System.nanoTime();
         algorithm.sort();
         long end = System.nanoTime();
