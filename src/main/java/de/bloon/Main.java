@@ -1,6 +1,7 @@
 package de.bloon;
 
 import de.bloon.sorting.algorithms.MergeSort;
+import de.bloon.sorting.algorithms.QuickSort;
 import de.bloon.sorting.algorithms.SelectionSort;
 import de.bloon.sorting.algorithms.SortingAlgorithm;
 
@@ -9,7 +10,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        Object[] data = generateRandomArray(20000, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        Object[] data = generateRandomArray(15000, Integer.MIN_VALUE, Integer.MAX_VALUE);
 
         double sSort = trackDuration(new SelectionSort<>(data, data[0].getClass())) / 1000000D;
         double mSort = trackDuration(new MergeSort<>(data, data[0].getClass())) / 1000000D;
