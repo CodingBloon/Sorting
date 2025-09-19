@@ -3,7 +3,7 @@ package de.bloon.sorting.algorithms;
 import de.bloon.sorting.types.Sortable;
 
 /**
- * Implemententation of Quick Sort Algorithm
+ * Implementation of Quick Sort Algorithm
  * <p>Time Complexity of this algorithm O(nlog(n))
  * <p>Space Complexity O(log(n))
  */
