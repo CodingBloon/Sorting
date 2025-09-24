@@ -11,14 +11,16 @@ public abstract class SearchAlgorithm<T> {
         this.arr = arr;
     }
 
-    @SuppressWarnings("unchecked")
     public SearchAlgorithm(Object[] objects, Class<?> dataType) {
         Sortable<?>[] temp = SortableArrayFactory.makeArray(objects);
         if(temp == null)
-            throw new RuntimeException("Invalid input (array was null)! Check data type input");
+            throw new NullPointerException("Invalid input (array was null)! Check data type input");
 
         if(temp[0].getTypeClass() != dataType)
             throw new RuntimeException("Input data type does not match expected!");
+
+        Class<?> t;
+
 
         this.arr = (Sortable<T>[]) temp;
     }

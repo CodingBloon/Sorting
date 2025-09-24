@@ -1,20 +1,24 @@
 package de.bloon.search.algorithms;
 
-import de.bloon.sorting.algorithms.MergeSort;
 import de.bloon.sorting.types.Sortable;
 import de.bloon.sorting.types.registry.SortableBuilderRegistry;
 
-import java.util.Arrays;
-
+/**
+ * Implementation of BinarySearch
+ * */
 public class BinarySearch<T> extends SearchAlgorithm<T> {
 
     /**
      * Constructs a {@code BinarySearch} instance
      *
      * @param arr Array to initialize {@code BinarySearch} instance
+     * @throws IllegalStateException if array is not sorted
      * */
     public BinarySearch(Sortable<T>[] arr) {
         super(arr);
+
+        if(!validateArray())
+            throw new IllegalStateException("Array must be sorted for search operations!");
     }
 
     /**
@@ -22,9 +26,13 @@ public class BinarySearch<T> extends SearchAlgorithm<T> {
      *
      * @param objects Array of objects to initialize {@code BinarySearch} instance
      * @param dataType Type of data of objects in {@code objects} array
+     * @throws IllegalStateException if array is not sorted
      * */
     public BinarySearch(Object[] objects, Class<?> dataType) {
         super(objects, dataType);
+
+        if(!validateArray())
+            throw new IllegalStateException("Array must be sorted for search operations!");
     }
 
     /**
@@ -37,7 +45,6 @@ public class BinarySearch<T> extends SearchAlgorithm<T> {
      * */
     @Override
     public int find(Sortable<T> sortable) {
-        //Sortable<T>[] temp = new MergeSort<T>(this.arr).sort();
         return search(sortable, this.arr);
     }
     /**
@@ -53,6 +60,15 @@ public class BinarySearch<T> extends SearchAlgorithm<T> {
     public int find(T value) {
         //Sortable<T>[] temp = new MergeSort<T>(this.arr).sort();
         return search((Sortable<T>) SortableBuilderRegistry.getBuilder(value.getClass()).make(value), this.arr);
+    }
+
+    /**
+     * Validates if the array is sorted
+     *
+     * @return true if array is sorted, false if array is unsorted
+    * */
+    private boolean validateArray() {
+        return false;
     }
 
     private int search(Sortable<T> sortable, Sortable<T>[] arr) {
