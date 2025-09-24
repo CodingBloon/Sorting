@@ -5,7 +5,7 @@ import de.bloon.sorting.types.Sortable;
 /**
  * Implementation of Bubble Sort Algorithm
  * <p>Time Complexity O(n^2)
- * <p>Space Complexity (1)
+ * <p>Space Complexity O(1)
  * */
 public class BubbleSort<T> extends SortingAlgorithm<T> {
 
