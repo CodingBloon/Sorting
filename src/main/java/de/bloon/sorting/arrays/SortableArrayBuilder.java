@@ -3,8 +3,8 @@ package de.bloon.sorting.arrays;
 import de.bloon.sorting.types.Sortable;
 
 /**
- * {@code SortableArrayBuilder} class provides the functionality to create arrays for a {@code Sortable}
- * */
+ * SortableArrayBuilder is an abstract class that defines a blueprint for creating Sortable arrays.
+ */
 public abstract class SortableArrayBuilder {
 
     /**

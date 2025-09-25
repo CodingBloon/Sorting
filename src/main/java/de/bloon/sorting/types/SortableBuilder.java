@@ -1,7 +1,7 @@
 package de.bloon.sorting.types;
 
 /**
- * {@code SortableBuilder} classes provides the functionality to create {@code Sortable} of objects
+ * SortableBuilder is an abstract class that defines a blueprint for creating Sortable objects.
  * */
 public abstract class SortableBuilder {
 

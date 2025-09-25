@@ -2,7 +2,10 @@ package de.bloon.sorting.types;
 
 /**
  * The {@code Sortable} class wraps a value of any type {@code T}.
- * <p>{@code Sortables} can be compared with other {@code Sortables} of same type or with their underlying type.
+ * 
+ * {@code Sortable} are used to provide a common interface for comparing values of different types.
+ * {@code Sortable} can be compared to other {@code Sortable} instances or to raw values of type {@code T}.
+ * This is especially useful in sorting algorithms where elements need to be compared and ordered.
  * */
 public abstract  class Sortable<T> {
 

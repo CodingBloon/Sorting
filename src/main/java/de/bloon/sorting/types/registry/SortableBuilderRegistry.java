@@ -5,7 +5,10 @@ import de.bloon.sorting.types.*;
 import java.util.HashMap;
 
 /**
- * Registry of all {@code Sortable} types and their builders
+ * Registry for {@code SortableBuilder} instances
+ * 
+ * By associating a {@code SortableBuilder} with a datatype, the registry allows for dynamic retrieval
+ * and creation of {@code Sortable} objects based on the datatype at runtime.
  * */
 public class SortableBuilderRegistry {
 

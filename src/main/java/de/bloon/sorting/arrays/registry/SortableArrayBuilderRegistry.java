@@ -6,9 +6,10 @@ import de.bloon.sorting.types.*;
 import java.util.HashMap;
 
 /**
- * Registry for all {@code SortableArrayBuilder}.
- * Builders for {@code Character}, {@code Integer}, {@code Long}, {@code Float} and {@code Double} are already registered.
- * New {@code SortableArrayBuilder} can be registered with register
+ * Registry for {@code SortableArrayBuilder} instances
+ * 
+ * By associating a {@code SortableArrayBuilder} with a datatype, the registry allows for dynamic retrieval
+ * and creation of {@code Sortable} arrays based on the datatype at runtime.
  * */
 public class SortableArrayBuilderRegistry {
 

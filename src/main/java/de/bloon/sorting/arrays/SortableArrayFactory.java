@@ -6,8 +6,12 @@ import de.bloon.sorting.types.SortableBuilder;
 import de.bloon.sorting.types.registry.SortableBuilderRegistry;
 
 /**
- * The {@code SortableArrayFactory} creates arrays for {@code Sortables} from object arrays.
- * {@code Sortable} arrays can directly be created from {@code Object} arrays or a datatype can be provided to create an empty array
+ * Factory class for creating {@code Sortable} arrays
+ * 
+ * Facilitates the creation of {@code Sortable} arrays from object arrays or based on a specific datatype.
+ * By leveraging the {@code SortableBuilderRegistry} and {@code SortableArrayBuilderRegistry},
+ * it ensures that the correct {@code Sortable} types and their corresponding array builders are used
+ * based on the provided input.
  * */
 public class SortableArrayFactory {
 
