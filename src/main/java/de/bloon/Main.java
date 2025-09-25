@@ -1,8 +1,6 @@
 package de.bloon;
 
-import de.bloon.search.algorithms.BinarySearch;
-import de.bloon.sorting.algorithms.MergeSort;
-import de.bloon.sorting.algorithms.SelectionSort;
+import de.bloon.search.algorithms.SearchAlgorithm;
 import de.bloon.sorting.algorithms.SortingAlgorithm;
 
 import java.util.Random;
@@ -10,6 +8,15 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
+        Object[] data = new Object[] {1,2,4,3,5,6,7,8,9,10};
+
+        try {
+            SearchAlgorithm<Integer> search = new de.bloon.search.algorithms.BinarySearch<>(data, Integer.class);
+
+            System.out.println(search.find(6));
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
         /*Object[] data = generateRandomArray(15000, Integer.MIN_VALUE, Integer.MAX_VALUE);
 
         double sSort = trackDuration(new SelectionSort<>(data, data[0].getClass())) / 1000000D;
@@ -19,6 +26,7 @@ public class Main {
         System.out.println("Merge Sort took " + mSort + "ms");*/
     }
 
+    @SuppressWarnings("all")
     private static long trackDuration(SortingAlgorithm<?> algorithm) {
         long start = System.nanoTime();
         algorithm.sort();

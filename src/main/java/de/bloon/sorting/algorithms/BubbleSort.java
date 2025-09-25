@@ -4,6 +4,10 @@ import de.bloon.sorting.types.Sortable;
 
 /**
  * Implementation of Bubble Sort Algorithm
+ * 
+ * Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, 
+ * compares adjacent elements and swaps them if they are in the wrong order.
+ * 
  * <p>Time Complexity O(n^2)
  * <p>Space Complexity O(1)
  * */
@@ -31,6 +35,12 @@ public class BubbleSort<T> extends SortingAlgorithm<T> {
         return arr;
     }
 
+    /**
+     * Swaps two elements in the array
+     *
+     * @param i Index of first element
+     * @param j Index of second element
+     * */
     private void swap(int i, int j) {
         Sortable<T> temp = this.arr[i];
         this.arr[i] = this.arr[j];

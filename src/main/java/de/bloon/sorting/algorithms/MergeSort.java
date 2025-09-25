@@ -4,6 +4,11 @@ import de.bloon.sorting.types.Sortable;
 
 /**
  * Implementation of Merge Sort Algorithm
+ * 
+ * Merge Sort is an efficient, stable, and comparison-based sorting algorithm.
+ * It divides the unsorted list into n sublists, each containing one element (a list of one element is considered sorted).
+ * Then it repeatedly merges sublists to produce new sorted sublists until there is only one sublist remaining, which will be the sorted list.
+ * 
  * <p>Time Complexity O(nlog(n))
  * <p>Space Complexity O(n)
  * */

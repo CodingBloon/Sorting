@@ -37,11 +37,10 @@ public abstract class SortingAlgorithm<T> {
         this.arr = (Sortable<T>[]) temp;
     }
 
-    /**
-     * Sorts all data in the array
-     *
+    /*
+     * Sorts the array using the implemented algorithm
      * @return sorted array
-     * */
+     */
     public abstract Sortable<T>[] sort();
 
     /**

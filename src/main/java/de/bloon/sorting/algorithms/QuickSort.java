@@ -4,8 +4,14 @@ import de.bloon.sorting.types.Sortable;
 
 /**
  * Implementation of Quick Sort Algorithm
- * <p>Time Complexity of this algorithm O(nlog(n))
- * <p>Space Complexity O(log(n))
+ * 
+ * Quick Sort is a highly efficient sorting algorithm and is based on partitioning an array into smaller sub-arrays. 
+ * A large array is partitioned into two arrays one of which holds values smaller than the specified value, say pivot, 
+ * based on which the partition is made and another array holds values greater than the pivot value. 
+ * The sub-arrays are then sorted recursively.
+ * 
+ * Time Complexity O(n log n) on average
+ * Space Complexity O(log n) due to recursive stack space
  */
 public class QuickSort<T> extends SortingAlgorithm<T> {
     
