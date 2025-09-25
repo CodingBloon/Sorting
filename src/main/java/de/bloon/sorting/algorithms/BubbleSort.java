@@ -7,9 +7,17 @@ import de.bloon.sorting.types.Sortable;
  * 
  * Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, 
  * compares adjacent elements and swaps them if they are in the wrong order.
- * 
- * <p>Time Complexity O(n^2)
- * <p>Space Complexity O(1)
+ * The pass through the list is repeated until the list is sorted.
+ * <p>
+ * Time Complexity: O(n^2) in all cases (best, average, worst)
+ * Space Complexity: O(1) (in-place)
+ * <p>
+ * Bubble Sort is a stable sort, meaning that it preserves the relative order of equal elements.
+ * <p>
+ * Due to its O(n^2) time complexity, Bubble Sort is inefficient on large lists
+ * and is generally outperformed by more advanced algorithms such as Quick Sort, Merge Sort, or
+ * Heap Sort. However, it can be useful for small datasets or when memory space is limited since it is
+ * an in-place sorting algorithm.
  * */
 public class BubbleSort<T> extends SortingAlgorithm<T> {
 

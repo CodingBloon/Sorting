@@ -9,10 +9,18 @@ import de.bloon.sorting.types.Sortable;
  * A large array is partitioned into two arrays one of which holds values smaller than the specified value, say pivot, 
  * based on which the partition is made and another array holds values greater than the pivot value. 
  * The sub-arrays are then sorted recursively.
- * 
- * Time Complexity O(n log n) on average
- * Space Complexity O(log n) due to recursive stack space
- */
+ * <p>
+ * Time Complexity: O(n log n) on average, O(n^2) in the worst case
+ * Space Complexity: O(log n) due to recursive stack space
+ * <p>
+ * Quick Sort is not a stable sort, meaning that it does not preserve the relative order of
+ * equal elements.
+ * <p>
+ * Quick Sort is generally faster in practice compared to other O(n log n) algorithms such as
+ * Merge Sort or Heap Sort, especially for large datasets. However, its performance can degrade to
+ * O(n^2) if the pivot selection is poor (e.g., always selecting the smallest or largest element as pivot).
+ * To mitigate this, techniques such as randomizing the pivot selection or using the median-of-three method are often employed.
+ * */
 public class QuickSort<T> extends SortingAlgorithm<T> {
     
     public QuickSort(Sortable<T>[] arr) {

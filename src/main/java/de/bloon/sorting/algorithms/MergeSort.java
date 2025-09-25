@@ -8,9 +8,14 @@ import de.bloon.sorting.types.Sortable;
  * Merge Sort is an efficient, stable, and comparison-based sorting algorithm.
  * It divides the unsorted list into n sublists, each containing one element (a list of one element is considered sorted).
  * Then it repeatedly merges sublists to produce new sorted sublists until there is only one sublist remaining, which will be the sorted list.
- * 
- * <p>Time Complexity O(nlog(n))
- * <p>Space Complexity O(n)
+ * <p>
+ * Time Complexity: O(n log n) in all cases (best, average, worst)
+ * Space Complexity: O(n) (not in-place)
+ * <p>
+ * Merge Sort is a stable sort, meaning that it preserves the relative order of equal elements.
+ * <p>
+ * Merge Sort is particularly efficient for large datasets and is often used in external sorting algorithms
+ * where the data to be sorted cannot fit into memory
  * */
 public class MergeSort<T> extends SortingAlgorithm<T> {
 

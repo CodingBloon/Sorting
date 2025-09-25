@@ -4,10 +4,24 @@ import de.bloon.sorting.types.Sortable;
 
 /**
  * Implementation of Selection Sort Algorithm<p>
- * <p>Time Complexity of this algorithm is O(n^2)<p>
- * Space Complexity is O(1)
  * 
- * 
+ * Selection Sort is an in-place comparison sorting algorithm.
+ * It divides the input list into two parts: a sorted and an unsorted region.
+ * The algorithm repeatedly selects the smallest (or largest, depending on sorting order) element from the
+ * unsorted region and moves it to the end of the sorted region.
+ * This process continues until the entire list is sorted.
+ * <p>
+ * Time Complexity: O(n^2) in all cases (best, average, worst)
+ * Space Complexity: O(1) (in-place)
+ * <p>
+ * Selection Sort is not a stable sort, meaning that it does not preserve the relative order of
+ * equal elements.
+ * <p>
+ * Due to its O(n^2) time complexity, Selection Sort is inefficient on large lists
+ * and is generally outperformed by more advanced algorithms such as Quick Sort, Merge Sort, or
+ * Heap Sort.
+ * However, it can be useful for small datasets or when memory space is limited since it is
+ * an in-place sorting algorithm.
  * */
 public class SelectionSort<T> extends SortingAlgorithm<T> {
 
