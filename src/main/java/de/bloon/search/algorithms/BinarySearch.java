@@ -78,7 +78,7 @@ public class BinarySearch<T> extends SearchAlgorithm<T> {
         System.out.println("Validating array...");
 
         for(int i = 0; i < this.arr.length - 1; i++)
-            if(this.arr[i + 1].biggerAs(this.arr[i]))
+            if(this.arr[i].biggerAs(this.arr[i + 1]))
                 return false;
         return true;
     }

@@ -17,13 +17,6 @@ public class Main {
         } catch(Exception e) {
             e.printStackTrace();
         }
-        /*Object[] data = generateRandomArray(15000, Integer.MIN_VALUE, Integer.MAX_VALUE);
-
-        double sSort = trackDuration(new SelectionSort<>(data, data[0].getClass())) / 1000000D;
-        double mSort = trackDuration(new MergeSort<>(data, data[0].getClass())) / 1000000D;
-
-        System.out.println("Selection Sort took " + sSort + "ms");
-        System.out.println("Merge Sort took " + mSort + "ms");*/
     }
 
     @SuppressWarnings("all")
